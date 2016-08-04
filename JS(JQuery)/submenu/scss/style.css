@@ -1,0 +1,44 @@
+/*header start*/
+header nav {
+  float: left;
+  font-family: Arial;
+  font-size: 12px;
+  background: #2f8be8; }
+  header nav li {
+    float: left; }
+    header nav li a {
+      display: block;
+      height: 2em;
+      line-height: 2em;
+      padding: 0 1.5em;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold; }
+    header nav li ul {
+      position: absolute;
+      display: none;
+      z-index: 999; }
+      header nav li ul li {
+        float: none; }
+        header nav li ul li a {
+          width: 80px; }
+  header nav li:hover a {
+    background: #f09d28;
+    color: #000; }
+  header nav li:hover .noJS {
+    display: block; }
+  header nav li:hover ul {
+    background: #f09d28; }
+    header nav li:hover ul li a {
+      display: block;
+      color: #000; }
+    header nav li:hover ul li:hover a {
+      background: #ffc97c; }
+
+/*header end*/
+/*content start*/
+/*content end*/
+/*footer start*/
+/*footer end*/
+
+/*# sourceMappingURL=style.css.map */

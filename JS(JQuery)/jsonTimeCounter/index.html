@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Json time counter</title>
+	<div id="time"></div>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script>
+		jQuery(document).ready(function($) {
+			function getTime() {
+				$.getJSON('time.php', function(data) {
+						time = "";
+						$.each(data, function(key, value) {
+							time = time + key + ' - ' + value + '<br>';
+						});
+					$('#time').html(time);
+				});
+			}
+			setInterval(getTime,1000);
+		});
+	</script>
+</body>
+</html>

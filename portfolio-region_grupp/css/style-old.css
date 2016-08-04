@@ -1,0 +1,317 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300&subset=latin,cyrillic);
+* {
+  margin: 0;
+  padding: 0;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 12px;
+  color: #ffffff; }
+
+header {
+  width: 100%;
+  height: auto;
+  background-color: #000000; }
+  header .header__adress, header .header__mail, header .header__tel, header .header__social-contacts {
+    display: inline-block;
+    line-height: 33px;
+    font-size: 12px; }
+  header .header__adress {
+    background: url("../images/header/header_adress.png") no-repeat center left;
+    padding-left: 20px; }
+  header .header__mail {
+    margin-left: 10px;
+    background: url("../images/header/header_mail.png") no-repeat center left;
+    padding-left: 20px; }
+  header .header__tel {
+    margin-left: 10px;
+    background: url("../images/header/header_tel.png") no-repeat center left;
+    padding-left: 20px; }
+  header .header__social-contacts {
+    margin-left: 5px; }
+    header .header__social-contacts button {
+      width: 130px;
+      height: 25px;
+      margin-top: 4px;
+      font-size: 12px;
+      background-color: #1abc9c;
+      text-transform: uppercase;
+      color: #ffffff; }
+    header .header__social-contacts img {
+      vertical-align: middle; }
+    header .header__social-contacts img[alt="facebook logo"] {
+      margin-left: 17px; }
+    header .header__social-contacts img[alt="vk logo"] {
+      margin-left: 29px; }
+    header .header__social-contacts img[alt="g+ logo"] {
+      margin-left: 20px; }
+
+/*block header end*/
+/*menu block start*/
+.menu__block {
+  width: auto;
+  height: 493px;
+  border-bottom: 5px solid #76d7c4; }
+  .menu__block .menu__block_logo, .menu__block .menu__block_main-menu {
+    display: inline-block; }
+  .menu__block .menu__block_logo {
+    padding-top: 42px;
+    float: left; }
+  .menu__block .menu__block_main-menu ul {
+    list-style: none; }
+    .menu__block .menu__block_main-menu ul li {
+      display: inline-block;
+      background: url("../images/menu/menu_devide.png") no-repeat right 57%;
+      margin-left: -4px; }
+      .menu__block .menu__block_main-menu ul li a {
+        display: block;
+        text-decoration: none;
+        color: #505050;
+        font-size: 14px;
+        font-weight: bold;
+        padding-top: 54px;
+        padding-bottom: 40px;
+        padding-right: 24px;
+        padding-left: 20px; }
+      .menu__block .menu__block_main-menu ul li a:hover {
+        background-color: #1abc9c; }
+    .menu__block .menu__block_main-menu ul li:first-child {
+      margin-left: 0px !important; }
+    .menu__block .menu__block_main-menu ul li:last-child {
+      background: none; }
+  .menu__block .menu__block_house {
+    float: left;
+    display: inline-block; }
+  .menu__block .menu__block_information-block {
+    float: right;
+    display: inline-block;
+    padding-right: 40px;
+    padding-top: 69px;
+    width: 280px; }
+    .menu__block .menu__block_information-block h1 {
+      font-size: 32px;
+      color: #35424d; }
+    .menu__block .menu__block_information-block p {
+      font-size: 24px;
+      color: #8595a2;
+      padding-top: 45px; }
+    .menu__block .menu__block_information-block img {
+      text-align: center;
+      margin-left: 10px;
+      padding-top: 65px;
+      padding-bottom: 25px; }
+    .menu__block .menu__block_information-block .menu__block_information-block_first-menu-button {
+      margin-left: 80px; }
+
+/*menu block end*/
+/*our services block start*/
+.our-services__block {
+  width: auto;
+  height: auto; }
+  .our-services__block h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #35424d;
+    padding-top: 25px;
+    padding-bottom: 30px; }
+  .our-services__block .our-services__block_info-1, .our-services__block .our-services__block_info-2,
+  .our-services__block .our-services__block_info-3, .our-services__block .our-services__block_info-4 {
+    width: 230px;
+    height: auto;
+    text-align: center;
+    display: inline-block;
+    background-color: #1abc9c; }
+    .our-services__block .our-services__block_info-1 h4, .our-services__block .our-services__block_info-2 h4,
+    .our-services__block .our-services__block_info-3 h4, .our-services__block .our-services__block_info-4 h4 {
+      padding-top: 190px;
+      font-size: 16px;
+      padding-bottom: 20px; }
+    .our-services__block .our-services__block_info-1 p, .our-services__block .our-services__block_info-2 p,
+    .our-services__block .our-services__block_info-3 p, .our-services__block .our-services__block_info-4 p {
+      font-size: 14px;
+      line-height: 18px;
+      padding-bottom: 20px; }
+    .our-services__block .our-services__block_info-1 img, .our-services__block .our-services__block_info-2 img,
+    .our-services__block .our-services__block_info-3 img, .our-services__block .our-services__block_info-4 img {
+      padding-bottom: 20px; }
+  .our-services__block .our-services__block_info-1:hover, .our-services__block .our-services__block_info-2:hover,
+  .our-services__block .our-services__block_info-3:hover, .our-services__block .our-services__block_info-4:hover {
+    background-color: #31353d; }
+  .our-services__block .our-services__block_info-2,
+  .our-services__block .our-services__block_info-3, .our-services__block .our-services__block_info-4 {
+    margin-left: 10px; }
+  .our-services__block .our-services__block_info-1 {
+    background-image: url("../images/our services/our-services__block_info-1.png");
+    background-repeat: no-repeat; }
+  .our-services__block .our-services__block_info-2 {
+    background-image: url("../images/our services/our-services__block_info-2.png");
+    background-repeat: no-repeat; }
+  .our-services__block .our-services__block_info-3 {
+    background-image: url("../images/our services/our-services__block_info-3.png");
+    background-repeat: no-repeat; }
+  .our-services__block .our-services__block_info-4 {
+    background-image: url("../images/our services/our-services__block_info-4.png");
+    background-repeat: no-repeat; }
+
+/*our services block end*/
+/*greetings block start*/
+.greetings__block {
+  width: auto;
+  height: auto; }
+  .greetings__block h2 {
+    font-size: 30px;
+    line-height: 55px;
+    color: #35424d;
+    padding-top: 45px; }
+  .greetings__block p {
+    font-size: 14px;
+    line-height: 23px;
+    color: #8595a2; }
+  .greetings__block .greetings__block_info-1, .greetings__block .greetings__block_info-2,
+  .greetings__block .greetings__block_info-3, .greetings__block .greetings__block_info-4 {
+    width: 165px;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    margin-top: 90px;
+    margin-left: 60px; }
+  .greetings__block h6 {
+    font-size: 16px;
+    line-height: 20px;
+    color: #35424d;
+    padding-top: 160px; }
+  .greetings__block p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #a2a2a2;
+    padding-top: 25px; }
+  .greetings__block .greetings__block_info-1 {
+    background-image: url("../images/greetings/greetings__block_info-1.png");
+    background-repeat: no-repeat;
+    background-position: center top; }
+  .greetings__block .greetings__block_info-2 {
+    background-image: url("../images/greetings/greetings__block_info-2.png");
+    background-repeat: no-repeat;
+    background-position: center top; }
+  .greetings__block .greetings__block_info-3 {
+    background-image: url("../images/greetings/greetings__block_info-3.png");
+    background-repeat: no-repeat;
+    background-position: center top; }
+  .greetings__block .greetings__block_info-4 {
+    background-image: url("../images/greetings/greetings__block_info-4.png");
+    background-repeat: no-repeat;
+    background-position: center top; }
+
+/*greetings block end*/
+/*news block start*/
+.news__block {
+  width: auto;
+  height: auto; }
+  .news__block h2 {
+    font-size: 30px;
+    line-height: 55px;
+    color: #35424d;
+    padding-top: 45px; }
+  .news__block .news__block_info-1, .news__block .news__block_info-2, .news__block .news__block_info-3 {
+    width: 310px;
+    height: auto;
+    display: inline-block;
+    padding-bottom: 40px; }
+    .news__block .news__block_info-1 .news__block_info-date, .news__block .news__block_info-2 .news__block_info-date, .news__block .news__block_info-3 .news__block_info-date {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #1d424e;
+      float: left;
+      text-align: center;
+      padding-top: 8px;
+      line-height: 15px;
+      margin-right: 20px;
+      margin-bottom: 15px; }
+    .news__block .news__block_info-1 h6, .news__block .news__block_info-2 h6, .news__block .news__block_info-3 h6 {
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #35424d; }
+    .news__block .news__block_info-1 p, .news__block .news__block_info-2 p, .news__block .news__block_info-3 p {
+      font-size: 14px;
+      line-height: 23px;
+      color: #8595a2;
+      padding-top: 15px;
+      padding-bottom: 20px; }
+    .news__block .news__block_info-1 button, .news__block .news__block_info-2 button, .news__block .news__block_info-3 button {
+      width: 105px;
+      height: 45px;
+      margin: 0 auto;
+      background-color: #1abc9c;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin: 0 30%; }
+    .news__block .news__block_info-1 button:hover, .news__block .news__block_info-2 button:hover, .news__block .news__block_info-3 button:hover {
+      background-color: #39464f; }
+  .news__block .news__block_info-2, .news__block .news__block_info-3 {
+    margin-left: 12px; }
+
+/*news block end*/
+/*footer start*/
+#footer {
+  height: 390px;
+  background: url("../images/footer/footer_bg.png") no-repeat;
+  background-size: cover; }
+  #footer h2 {
+    font-size: 36px;
+    line-height: 55px;
+    padding-top: 60px;
+    text-align: center; }
+  #footer p {
+    font-size: 24px;
+    line-height: 33px;
+    padding-bottom: 65px;
+    text-align: center; }
+  #footer .footer__contacts {
+    background-color: #31353d; }
+    #footer .footer__contacts .footer__contacts_logo, #footer .footer__contacts .footer__contacts_years, #footer .footer__contacts .footer__contacts-all {
+      width: auto;
+      display: inline-block; }
+      #footer .footer__contacts .footer__contacts_logo p, #footer .footer__contacts .footer__contacts_years p, #footer .footer__contacts .footer__contacts-all p {
+        font-size: 12px;
+        line-height: 16px;
+        padding-bottom: 0px; }
+    #footer .footer__contacts .footer__contacts_logo {
+      margin-left: 50px;
+      padding-top: 45px; }
+      #footer .footer__contacts .footer__contacts_logo .footer__contacts_social {
+        padding-top: 25px;
+        padding-bottom: 40px; }
+        #footer .footer__contacts .footer__contacts_logo .footer__contacts_social a {
+          padding-left: 30px;
+          padding-bottom: 40px; }
+    #footer .footer__contacts .footer__contacts-all {
+      float: right;
+      padding-top: 25px;
+      padding-left: 30px; }
+      #footer .footer__contacts .footer__contacts-all .footer__contacts_adress, #footer .footer__contacts .footer__contacts-all .footer__contacts_tel, #footer .footer__contacts .footer__contacts-all .footer__contacts_mail {
+        margin-top: 20px;
+        padding-left: 30px;
+        padding-right: 30px; }
+      #footer .footer__contacts .footer__contacts-all .footer__contacts_adress {
+        background: url("../images/footer/footer_adress.png") no-repeat left center; }
+      #footer .footer__contacts .footer__contacts-all .footer__contacts_tel {
+        background: url("../images/footer/footer_tel.png") no-repeat left center; }
+      #footer .footer__contacts .footer__contacts-all .footer__contacts_mail {
+        background: url("../images/footer/footer_mail.png") no-repeat left center; }
+    #footer .footer__contacts .footer__contacts_web-sutio {
+      text-align: center;
+      padding-bottom: 15px; }
+      #footer .footer__contacts .footer__contacts_web-sutio a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 10px; }
+
+/*footer end*/

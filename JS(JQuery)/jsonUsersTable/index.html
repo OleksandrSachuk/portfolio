@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Json users table</title>
+</head>
+<style>
+	body{
+		text-align: center;
+	}
+	table{
+		width: 200px;
+		border-collapse: collapse;
+	}
+	td {
+		padding: 3px;
+		border: 1px solid black;
+	}
+</style>
+<body>
+	<table id="users">
+		<tr>
+			<td>id</td>
+			<td>name</td>
+			<td>login</td>
+		</tr>
+	</table>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script>
+		jQuery(document).ready(function($) {
+			$.getJSON('users.json', function(data) {
+				for(var i=0;i<data.users.length;i++){
+					$("#users").append('<tr><td>' + data.users[i].id + '</td><td>' + data.users[i].name + 
+					'</td><td>' + data.users[i].login + '</td></tr>');
+				}
+			});
+		});
+	</script>
+</body>
+</html>

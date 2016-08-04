@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  background-color: white;
+  color: black; }
+
+header, section {
+  display: block; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/*header start*/
+header .header__logo_text {
+  font-size: 2em;
+  padding-top: 50px; }
+
+header nav {
+  float: left; }
+  header nav ul {
+    list-style: none; }
+    header nav ul li {
+      display: inline-block; }
+      header nav ul li a {
+        display: block;
+        font-size: 18px;
+        color: blue;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        padding-left: 15px;
+        padding-right: 15px; }
+      header nav ul li:hover {
+        color: black; }
+
+/*header end*/
+/*section slider start*/
+.slider {
+  width: 100%;
+  height: 670px;
+  position: relative; }
+  .slider h1 {
+    position: absolute;
+    left: 50px;
+    top: 50px; }
+  .slider #formRequest {
+    padding: 20px;
+    background-color: #C0C0C0;
+    position: absolute;
+    top: 50px;
+    right: 200px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px; }
+    .slider #formRequest input {
+      margin-bottom: 10px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      padding: 5px; }
+    .slider #formRequest input[type="submit"] {
+      margin-top: 10px;
+      float: right;
+      padding: 5px; }
+
+/*section slider end*/
+/*section content start*/
+.articles .article {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .articles .article img {
+    width: 50px; }
+  .articles .article h2 {
+    text-align: left; }
+  .articles .article p {
+    text-align: justify; }
+  .articles .article a {
+    text-decoration: underline; }
+
+.pages {
+  text-align: center;
+  font-size: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+  .pages div {
+    display: inline-block;
+    border: 1px solid black;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer; }
+    .pages div:first-child {
+      -webkit-border-top-left-radius: 5px;
+      border-top-left-radius: 5px;
+      -webkit-border-bottom-left-radius: 5px;
+      border-bottom-left-radius: 5px; }
+    .pages div:last-child {
+      -webkit-border-top-right-radius: 5px;
+      border-top-right-radius: 5px;
+      -webkit-border-bottom-right-radius: 5px;
+      border-bottom-right-radius: 5px; }
+    .pages div:nth-child(even) {
+      border-left: 0;
+      border-right: 0; }
+
+/*section content end*/
+/*footer start*/
+footer {
+  padding-top: 100px; }
+  footer .row {
+    border: 1px dotted black; }
+  footer .footer__aboutUs {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
+    border-right: 1px solid black; }
+  footer .footer__contactUs {
+    padding-top: 50px;
+    padding-left: 50px;
+    font-size: 2em; }
+  footer form {
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-bottom: 20px; }
+    footer form textarea {
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      padding: 10px; }
+    footer form a {
+      text-decoration: underline; }
+    footer form input[type="submit"] {
+      padding: 10px 20px;
+      margin-left: 100px;
+      margin-top: 20px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      background-color: #808088;
+      opacity: 0.7;
+      color: white; }
+
+/*footer end*/
+/*pop up start*/
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  opacity: 0.5;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #000; }
+
+.popup {
+  display: none;
+  position: fixed;
+  border: 3px solid #999;
+  background: #fff;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -100px;
+  z-index: 1000;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 30px; }
+
+.close {
+  display: block;
+  width: 24px;
+  text-align: center;
+  cursor: pointer;
+  height: 24px;
+  line-height: 24px;
+  background: #fff;
+  color: red;
+  border: 3px solid red;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 20px; }
+
+/*pop up end*/

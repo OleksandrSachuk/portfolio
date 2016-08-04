@@ -1,0 +1,14 @@
+p {
+	text-indent: 1.5em;
+	text-align: justify;
+}
+.scrollup {
+	width: 40px;
+	height: 40px;
+	opacity: 0.9;
+	position: fixed;
+	bottom: 50px;
+	right: 100px;
+	display: none;
+	background: url('../img/icon_top.png') no-repeat;
+}

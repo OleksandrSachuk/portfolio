@@ -1,0 +1,405 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html, body, .container {
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  font-family: Verdana, serif;
+  font-size: 10px;
+}
+header, section {
+  display: block;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.clearfix:before {
+	content: "";
+	display: table;
+	clear: both;
+}
+.container {
+  width: 100%;
+  max-width: 2480px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: 0 auto;
+  line-height: 2em;
+}
+/*header start*/
+h4{
+		letter-spacing: 0.5em;
+	}
+hr{
+	height: 2px;
+	background-color: #000;
+}
+header {
+	margin-top: 70px;
+
+	.header__info{
+		float: left;
+		width: 80%;
+
+		.header__info_item1{
+			.header__info_item1-title{
+				width: 30%;
+				float: left;
+			}
+		}
+
+		.header__info_item2{
+			.header__info_item2-title{
+				width: 30%;
+				float: left;
+			}
+		}
+
+		.header__info_item3{
+			.header__info_item3-title{
+				width: 30%;
+				float: left;
+			}
+		}
+		.header__info_item4{
+			.header__info_item4-title{
+				width: 30%;
+				float: left;
+			}
+		}
+		.header__info_item5{
+			.header__info_item5-title{
+				width: 30%;
+				float: left;
+			}
+		}
+		.header__info_item6{
+			.header__info_item6-title{
+				width: 30%;
+				float: left;
+			}
+		}
+	}
+
+	.header__photo{
+		width: 20%;
+		float: right;
+
+		img{
+			height: 150px;
+			float: right;
+		}
+	}
+
+}
+/*header end*/
+
+/*section career objective start*/
+.careerObjective{
+	margin-top: 200px;	
+}
+/*section career objective end*/
+
+/* section skills start*/
+.skills {
+	margin-top: 20px;
+	p{
+		font-weight: bold;
+	}
+
+	ul {
+	    list-style: none;
+	    padding-left: 25%;
+	}
+
+	ul li:before {
+	    content:  "—";
+	    position: relative;
+	    left: -5px;
+	}
+	ol{
+		padding-left: 25%;
+	}
+	.myProjects{
+		font-weight: bold;
+		padding-left: 23%;
+	}
+	.languageSkills{
+		padding-left: 23%;
+	}
+}
+/* section skills end*/
+
+/*section education start*/
+.education{
+	margin-top: 20px;
+
+	.education__item1{
+		.education__item1_date{
+			width: 20%;
+			height: 50px;
+			float: left;
+			font-weight: bold;
+		}
+		.education__item1_info{
+
+		}
+	}
+	.education__item2{
+		.education__item2_date{
+			width: 20%;
+			height: 50px;
+			float: left;
+			font-weight: bold;
+		}
+	}
+}
+/*section education end*/
+
+/*footer start*/
+footer {
+	margin-top: 20px;
+	line-height: 1em;
+	padding-bottom: 20px;
+
+	.work__item1{
+		.work__item1_date{
+			width: 20%;
+			float: left;
+			height: 50px;
+			font-weight: bold;
+		}
+		.work__item1_info{
+			span{
+				font-weight: bold;
+			}
+		}
+	}
+	.work__item2{
+		.work__item2_date{
+			width: 20%;
+			float: left;
+			height: 50px;
+			font-weight: bold;
+		}
+		.work__item2_info{
+			span{
+				font-weight: bold;
+			}
+		}
+	}
+	.work__item3{
+		.work__item3_date{
+			width: 20%;
+			float: left;
+			height: 50px;
+			font-weight: bold;
+		}
+		.work__item3_info{
+			span{
+				font-weight: bold;
+			}
+		}
+	}
+	.work__item4{
+		.work__item4_date{
+			width: 20%;
+			float: left;
+			height: 50px;
+			font-weight: bold;
+		}
+		.work__item4_info{
+			span{
+				font-weight: bold;
+			}
+		}
+	}
+}
+/*footer end*/
+
+@media screen and (max-width: 760px){
+	.education{
+
+		.education__item1{
+			.education__item1_date{
+				width: 100%;
+				height: auto;
+				float: none;
+			}
+			.education__item1_info{
+				margin-left: 10%;
+			}
+		}
+		.education__item2{
+			.education__item2_date{
+				width: 100%;
+				height: auto;
+				float: none;
+				margin-top: 20px;
+			}
+			.education__item2_info{
+				margin-left: 10%;
+			}
+		}
+	}
+
+	footer {
+		.work__item1{
+			.work__item1_date{
+				width: 100%;
+				float: none;
+				height: auto;
+			}
+			.work__item1_info{
+				margin-left: 10%;
+			}
+		}
+		.work__item2{
+			.work__item2_date{
+				width: 100%;
+				float: none;
+				height: auto;
+			}
+			.work__item2_info{
+				margin-left: 10%;
+			}
+		}
+		.work__item3{
+			.work__item3_date{
+				width: 100%;
+				float: none;
+				height: auto;
+			}
+			.work__item3_info{
+				margin-left: 10%;
+			}
+		}
+		.work__item4{
+			.work__item4_date{
+				width: 100%;
+				float: none;
+				height: auto;
+			}
+			.work__item4_info{
+				margin-left: 10%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 560px){
+	header {
+		.header__photo{
+			width: 100%;
+			text-align: center;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			
+			img{
+				height: auto;
+				float: none;
+			}
+
+		.header__info{
+			width: 100%;
+			
+			.header__info_item1{
+				.header__info_item1-title{
+					width: 15%;
+				}
+			}
+			.header__info_item2{
+				.header__info_item2-title{
+					width: 15%;
+				}
+			}
+			.header__info_item3{
+				.header__info_item3-title{
+					width: 15%;
+				}
+			}
+			.header__info_item4{
+				.header__info_item4-title{
+					width: 15%;
+				}
+			}
+			.header__info_item5{
+				.header__info_item5-title{
+					width: 15%;
+				}
+			}
+			.header__info_item6{
+				.header__info_item6-title{
+					width: 15%;
+				}
+			}
+		}
+	}
+	.careerObjective{
+		margin-top: 150px;	
+	}
+}
+@media screen and (max-width: 370px){
+	header {
+		.header__info{
+			
+			.header__info_item1{
+				.header__info_item1-title{
+					float: none;
+				}
+				.header__info_item1-description{
+					padding-left: 15%;
+				}
+			}
+			.header__info_item2{
+				.header__info_item2-title{
+					float: none;
+				}
+				.header__info_item2-description{
+					padding-left: 15%;
+				}
+			}
+			.header__info_item3{
+				.header__info_item3-title{
+					float: none;
+				}
+				.header__info_item3-description{
+					padding-left: 15%;
+					a{
+						display: block;	
+					}
+				}
+			}
+			.header__info_item4{
+				.header__info_item4-title{
+					float: none;
+				}
+				.header__info_item4-description{
+					padding-left: 15%;
+				}
+			}
+			.header__info_item5{
+				.header__info_item5-title{
+					float: none;
+				}
+				.header__info_item5-description{
+					padding-left: 15%;
+				}
+			}
+			.header__info_item6{
+				.header__info_item6-title{
+					float: none;
+				}
+				.header__info_item6-description{
+					padding-left: 15%;
+				}
+			}
+		}
+	}
+	.careerObjective{
+		margin-top: 300px;	
+	}
+}

@@ -1,0 +1,32 @@
+.owl-theme .owl-controls .owl-page span{
+
+	display: none;
+}
+
+.owl-theme .owl-controls .owl-buttons div{
+	color: #FFF;
+	font-size: 5em !important;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background: none;
+	color: black;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 1;
+}
+.owl-prev{
+	position: absolute;
+	top: 250px;
+	left: 50px;
+}
+.owl-next{
+	position: absolute;
+	top: 250px;
+	right: 50px;
+}
