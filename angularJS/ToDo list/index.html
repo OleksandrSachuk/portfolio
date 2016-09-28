@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        ul {
+            list-style-type: none;
+            text-align: left;
+        }
+
+        li {
+            margin-left: -45px;
+        }
+
+        .toDo__list {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .done-true {
+            text-decoration: line-through;
+            color: grey;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>ToDo list</title>
+</head>
+<body>
+<div ng-app="App" class="toDo__list">
+    <h1>ToDo list</h1>
+    <div ng-controller="TodoCtrl">
+        <span>{{remaining()}} of {{todos.length}} remaining</span>
+        <br>
+        <a href="#" ng-click="archive()">Add to archive selected todos</a>
+        <br>
+        <br>
+        <form ng-submit="addTodo()">
+            <input type="text" ng-model="todoText" size="30" placeholder="add new todo here">
+            <input type="submit" value="add">
+        </form>
+        <ul>
+            <li ng-repeat="todo in todos">
+                <input type="checkbox" ng-model="todo.done">
+                <span class="done-{{todo.done}}">{{todo.text}}</span>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script>
+    (function () {
+        'use script';
+        angular
+                .module('App', [])
+                .controller('TodoCtrl', function ($scope) {
+                    $scope.todos = [
+                        {text:'learn angular', done:true},
+                        {text:'build an angular app', done:false}];
+
+                    $scope.addTodo = function() {
+                        $scope.todos.push({text:$scope.todoText, done:false});
+                        $scope.todoText = '';
+                    };
+
+                    $scope.remaining = function() {
+                        var count = 0;
+                        angular.forEach($scope.todos, function(todo) {
+                            count += todo.done ? 0 : 1;
+                        });
+                        return count;
+                    };
+
+                    $scope.archive = function() {
+                        var oldTodos = $scope.todos;
+                        $scope.todos = [];
+                        angular.forEach(oldTodos, function(todo) {
+                            if (!todo.done) $scope.todos.push(todo);
+                        });
+                    };
+                })
+    })();
+</script>
+</body>
+</html>
