@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        li{
+            list-style-type: none;
+        }
+        .employed__item{
+            width: 1002px;
+            height: 133px;
+            background-color: white;
+            border: 1px solid #a6a6a6;
+            box-shadow: 0 0 5px rgba(0, 0, 1, 0.5);
+            margin-left: 20px;
+            margin-top: 8px;
+            position: relative;
+        }
+        .employed__item img:first-child{
+            margin: 4px;
+        }
+
+        .employed__item_name{
+            color: #374483;
+            font-size: 20px;
+            font-weight: 400;
+            padding-left: 21px;
+            position: absolute;
+            top: 40%;
+        }
+        .employed__item_like{
+            float: right;
+            margin-right: 68px;
+            margin-top: 50px;
+            position: relative;
+        }
+        .employed__item_like span{
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            border: 1px solid #fcc161;
+            color: #374483;
+            line-height: 30px;
+            text-align: center;
+            margin-left: 10px;
+
+        }
+        .employed__item_like span:nth-child(1){
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .employed__item_like>span{
+            margin-right: 36px;
+        }
+        .employed__item_like img{
+            cursor: pointer;
+            -moz-transition: all 1s;
+            -webkit-transition: all 1s;
+            -o-transition: all 1s;
+            transition: ease-in-out 1s;
+        }
+        .employed__item_voteUp{
+            color: #008000;
+            position: absolute;
+            bottom: 20px;
+            right: 185px;
+
+        }
+        .employed__item_voteDown{
+            color: rgb(255,0,0);
+            position: absolute;
+            bottom: 20px;
+            right: 15px;
+        }
+        .employed__item_likeIcon.active {
+            -webkit-animation: myScale 1; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+            animation: myScale 1;
+            animation-duration: 2s;
+        }
+        .employed__item_dislikeIcon.active {
+            -webkit-animation: myScale 1; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+            animation: myScale 1;
+            animation-duration: 2s;
+        }
+        @-webkit-keyframes myScale {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.5);}
+            0% {transform: scale(1);}
+        }
+
+        @keyframes myScale {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.5);}
+            0% {transform: scale(1);}
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Like - dislike</title>
+</head>
+<body>
+<div ng-app="app">
+    <ul ng-controller="AppController">
+        <li ng-repeat="item in employedVacanciesArray" class="employed__item">
+            <div>
+                <img ng-src={{item.photoUrl}} alt="фото" width="189" height="125">
+                <span class="employed__item_name" ng-bind="item.userName"></span>
+                <div class="employed__item_like">
+                    <img src="icon_like.png" alt="like" class="employed__item_likeIcon"
+                         ng-click="voteUp($index); customToggleDown = true; customToggleUp = !customToggleUp;
+                                 setActive($event)">
+
+                    <span ng-bind="item.like"></span>
+                    <img src="icon_dislike.png" alt="dislike" class="employed__item_dislikeIcon"
+                         ng-click="voteDown($index); customToggleUp = true; customToggleDown = !customToggleDown;
+                                 setActive($event)">
+
+                    <span ng-bind="item.dislike"></span>
+                </div>
+                <div class="employed__item_voteUp" ng-hide="customToggleUp">Ваш голос "за" принят</div>
+                <div class="employed__item_voteDown" ng-hide="customToggleDown">Ваш голос "против" принят</div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<script>
+    (function () {
+
+        'use strict';
+        /*angular*/
+        angular
+                .module('app',[])
+                .controller('AppController',['$scope',function ($scope) {
+                    $scope.employedVacanciesArray = [
+                        {
+                            "id": 1,
+                            "photoUrl": "http://50xgrey.ru/wp-content/uploads/2015/09/test.jpg",
+                            "userName": "Sasha",
+                            "like": 1,
+                            "dislike": 2,
+                            "opinion": 0
+                        },
+                        {
+                            "id": 2,
+                            "photoUrl": "http://50xgrey.ru/wp-content/uploads/2015/09/test.jpg",
+                            "userName": "Sergey",
+                            "like": 3,
+                            "dislike": 4,
+                            "opinion": 1
+                        },
+                        {
+                            "id": 3,
+                            "photoUrl": "http://50xgrey.ru/wp-content/uploads/2015/09/test.jpg",
+                            "userName": "Andrey",
+                            "like": 4,
+                            "dislike": 5,
+                            "opinion": -1
+                        }];
+                    var success = true;
+                    $scope.voteUp = function (index) {
+                        var opinion = $scope.employedVacanciesArray[index].opinion;
+                        if (success && opinion == 0){
+                            $scope.employedVacanciesArray[index].like++;
+                            $scope.employedVacanciesArray[index].opinion = 1;
+                            success = false;
+                        }
+                        if (success && opinion == -1){
+                            $scope.employedVacanciesArray[index].like++;
+                            $scope.employedVacanciesArray[index].dislike--;
+                            $scope.employedVacanciesArray[index].opinion = 1;
+                            success = false;
+                        }
+                    };
+                    $scope.voteDown = function (index) {
+                        var opinion = $scope.employedVacanciesArray[index].opinion;
+                        if (success && opinion == 0 && $scope.employedVacanciesArray[index].dislike > 0){
+                            $scope.employedVacanciesArray[index].dislike--;
+                            $scope.employedVacanciesArray[index].opinion = -1;
+                            success = false;
+                        }
+                        if (success && opinion == 1 && $scope.employedVacanciesArray[index].dislike > 0){
+                            $scope.employedVacanciesArray[index].dislike++;
+                            $scope.employedVacanciesArray[index].like--;
+                            $scope.employedVacanciesArray[index].opinion = -1;
+                            success = false;
+                        }
+                    }
+                    $scope.customToggleUp = true;
+                    $scope.customToggleDown = true;
+                    $scope.setActive = function (evt) {
+                        angular.element(evt.target).addClass('active');
+                        setTimeout(function () {
+                            angular.element(evt.target).removeClass('active');
+                        }, 2000);
+                    }
+                }]);
+    })();
+</script>
+</body>
+</html>
