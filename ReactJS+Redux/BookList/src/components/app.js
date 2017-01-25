@@ -5,9 +5,12 @@ import BookDetail from '../containers/book-detail';
 export default class App extends Component {
   render() {
     return (
-      <div>
-        <BookList/>
-        <BookDetail/>
+      <div className="container">
+          <br/>
+          <div className="row">
+              <BookList/>
+              <BookDetail/>
+          </div>
       </div>
     );
   }
