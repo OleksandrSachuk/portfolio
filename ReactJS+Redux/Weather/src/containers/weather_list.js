@@ -15,14 +15,14 @@ class WeatherList extends Component{
 
         return(
             <tr key={name}>
-                <td><GoogleMap lon={lon} lat={lat}/></td>
-                <td>
+                <td className="col-xs-3"><GoogleMap lon={lon} lat={lat}/></td>
+                <td className="col-xs-3">
                     <Chart data={temps} color='orange' units='K' />
                 </td>
-                <td>
+                <td className="col-xs-3">
                     <Chart data={pressures} color='green' units='hPa' />
                 </td>
-                <td>
+                <td className="col-xs-3">
                     <Chart data={humidities} color='black' units='%' />
                 </td>
             </tr>
